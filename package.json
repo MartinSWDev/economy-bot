@@ -1,0 +1,23 @@
+{
+  "name": "economy-bot",
+  "version": "1.0.0",
+  "description": "Basic economy bot for discord server",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "MartinSWDev",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.1.0",
+    "axios": "^0.27.2",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.10",
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.2",
+    "mongoose": "^6.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
