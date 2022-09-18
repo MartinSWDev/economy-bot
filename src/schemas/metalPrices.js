@@ -5,7 +5,23 @@ const metalPricesSchema = new Schema({
     priceTimeStamp: Number,
     base: String,
     date: String,
-    rates: Schema.Types.Mixed,
+    rates: {
+        gold: Number,
+        silver: Number,
+        platinum: Number,
+        palladium: Number,
+        rhodium: Number,
+        ruthenium: Number,
+        copper: Number,
+        nickel: Number,
+        aluminium: Number,
+        zinc: Number,
+        tin: Number,
+        cobalt: Number,
+        iridium: Number,
+        lead: Number,
+        iron: Number,
+},
     unit: String
 },{
     timestamps:true

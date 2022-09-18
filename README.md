@@ -11,4 +11,5 @@ https://discordjs.guide
 2. Run npm install
 
 ## Current Commands ## 
-updatePrices - Updates prices in mongoDB from https://metals-api.com (can only be run once per day)
+/updatePrices - Updates prices in mongoDB from https://metals-api.com (can only be run once per day)
+/prices - Displays latest prices held in mongoDB

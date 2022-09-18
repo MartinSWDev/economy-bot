@@ -12,6 +12,7 @@ module.exports = {
     const latestPrices = await MetalPrices.findOne()
       .sort({ updatedAt: -1 })
       .limit(1);
+    // console.log(latestPrices)
 
     if (latestPrices) {
       const then = new Date(latestPrices.updatedAt).getTime();
@@ -35,7 +36,23 @@ module.exports = {
                 priceTimeStamp: data.timestamp,
                 base: data.base,
                 date: data.date,
-                rates: data.rates,
+                rates: {
+                  gold: data.rates.XAU,
+                  silver: data.rates.XAG,
+                  platinum: data.rates.XPT,
+                  palladium: data.rates.XPD,
+                  rhodium: data.rates.XRH,
+                  ruthenium: data.rates.RUTH,
+                  copper: data.rates.XCU,
+                  nickel: data.rates.NI,
+                  aluminium: data.rates.ALU,
+                  zinc: data.rates.ZNC,
+                  tin: data.rates.TIN,
+                  cobalt: data.rates.LCO,
+                  iridium: data.rates.IRD,
+                  lead: data.rates.LEAD,
+                  iron: data.rates.IRON
+                },
                 unit: data.unit,
               });
 
@@ -56,6 +73,11 @@ module.exports = {
             console.log(error);
           });
       }
+    }
+    else {
+      await interaction.reply({
+        content: `Currently no prices in database, have you run /pricesInit ?`
+      });
     }
   },
 };
