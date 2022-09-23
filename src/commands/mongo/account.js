@@ -24,11 +24,6 @@ module.exports = {
                         inline: false
                     },
                     {
-                        name: "Mines",
-                        value: `${userAcc.mines ? userAcc.mines : "None"}`,
-                        inline: false
-                    },
-                    {
                         name: "Wallet",
                         value: `${userAcc.wallet}`,
                         inline: false
@@ -39,8 +34,13 @@ module.exports = {
                         inline: false
                     },
                     {
+                        name: "Mines",
+                        value: `${userAcc.mines}`,
+                        inline: false
+                    },
+                    {
                         name: "Storage",
-                        value: `${userAcc.starage ? userAcc.storage : "None"}`,
+                        value: `${userAcc.starage}`,
                         inline: false
                     }
                 ])
