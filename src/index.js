@@ -34,7 +34,6 @@ for (const folder of functionFolders) {
 
 client.handleEvents();
 client.handleCommands();
-client.handleComponents();
 client.login(discord_bot_token);
 
 // mongo connection
