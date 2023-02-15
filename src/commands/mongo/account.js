@@ -67,7 +67,7 @@ module.exports = {
             await interaction.reply({
                 content: `Account has been created, please run command again`,
             });
-            console.log(account)
+            // console.log(account)
         }
     }
 }

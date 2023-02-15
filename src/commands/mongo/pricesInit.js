@@ -12,7 +12,7 @@ module.exports = {
         const latestPrices = await MetalPrices.findOne()
             .sort({ updatedAt: -1 })
             .limit(1);
-        console.log(latestPrices)
+        // console.log(latestPrices)
 
         if (!latestPrices) {
                 axios
@@ -22,7 +22,7 @@ module.exports = {
                     .then(async function ({ data }) {
                         // handle success
                         if (data.success) {
-                            console.log(data);
+                            // console.log(data);
                             const metalPrices = await new MetalPrices({
                                 _id: mongoose.Types.ObjectId(),
                                 priceTimeStamp: data.timestamp,
@@ -52,7 +52,7 @@ module.exports = {
                             await interaction.reply({
                                 content: `Metal prices have been initialised`,
                             });
-                            console.log(metalPrices)
+                            // console.log(metalPrices)
                         } else {
                             console.log("Error with GET data");
                             await interaction.reply({

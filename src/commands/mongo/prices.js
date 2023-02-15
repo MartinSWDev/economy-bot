@@ -10,7 +10,7 @@ module.exports = {
             .sort({ updatedAt: -1 })
             .limit(1);
         if(latestPrices){
-        console.log(latestPrices)
+        // console.log(latestPrices)
 
         const embed = new EmbedBuilder()
             .setTitle(`Current Prices`)
